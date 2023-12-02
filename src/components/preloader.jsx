@@ -6,8 +6,8 @@ const PreLoader = () => {
     preLoaderAnim();
   }, []);
   return (
-    <div className="bg-dark">
-      <div className="texts-container">
+    <div className="preloader justify-center content-center">
+      <div className="flex texts-container justify-center ">
         <span>Developer,</span>
         <span>Curator,</span>
         <span>Vibes.</span>

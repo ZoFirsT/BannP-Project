@@ -1,16 +1,11 @@
-import { useState } from 'react'
-import PreLoader from './components/preloader'
+import PreLoader from './components/preloader';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+    <PreLoader/>
       <div className=''>
-        <PreLoader/>
-        <p>
-        Main
-        </p>
+        <h1>Main</h1>
       </div>
     </>
   )
