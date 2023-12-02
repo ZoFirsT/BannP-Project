@@ -3,7 +3,7 @@ import { FiHome, FiShoppingCart, FiSettings, FiBox, FiLogOut, FiCheckCircle, FiT
 import { BsThreeDots } from 'react-icons/bs';
 import MyLineChart from './LineChart'; // Make sure the path is correct
 
-const Dashboard = () => {
+const Managestore = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -37,7 +37,7 @@ const Dashboard = () => {
                         <nav className="flex flex-col gap-4">
                             <MenuItem icon={<FiHome />} title="Dashboard" />
                             <MenuItem icon={<FiShoppingCart />} title="Order Product" />
-                            <MenuItem icon={<FiSettings />} title="Manage Store" />
+                            <MenuItemSelcet icon={<FiSettings />} title="Manage Store" />
                             <MenuItem icon={<FiBox />} title="Manage Product" />
                         </nav>
                     </div>
@@ -47,17 +47,12 @@ const Dashboard = () => {
 
             <div className="flex-grow p-6">
                 <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-2xl pl-10 font-semibold text-gray-200">Dashboard</h2>
+                    <h2 className="text-2xl pl-10 font-semibold text-gray-200">Manage Store</h2>
                     <div className="flex items-center">
                         <FiUser className="text-2xl text-gray-600" />
                         <p>| Users</p>
                         <BsThreeDots className="text-2xl text-gray-600 ml-4" />
                     </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <InfoCard icon={<FiCheckCircle />} title="Completed Orders" value="50" />
-                    <InfoCard icon={<FiTrendingUp />} title="Sales" value="10K บาท" />
-                    <InfoCard icon={<FiUser />} title="Customers" value="95%" />
                 </div>
                 <div className="bg-gray-600 p-6 rounded-xl shadow-lg mt-6">
                     <h3 className="text-xl font-semibold mb-4 text-gray-200">Sales Over Time</h3>
@@ -77,6 +72,13 @@ const MenuItem = ({ icon, title }) => (
     </a>
 );
 
+const MenuItemSelcet = ({ icon, title }) => (
+    <a href="#" className="flex items-center p-4 text-xl rounded-2xl bg-orange-400 scale-105 shadow-lg transition ease-in-out duration-300">
+        {icon}
+        <span className="ml-3">{title}</span>
+    </a>
+);
+
 const InfoCard = ({ icon, title, value }) => (
     <div className="bg-orange-300 p-4 rounded-xl shadow-md flex items-center">
         <div className="p-4 bg-gray-600 rounded-xl text-white">
@@ -89,4 +91,4 @@ const InfoCard = ({ icon, title, value }) => (
     </div>
 );
 
-export default Dashboard;
+export default Managestore;
