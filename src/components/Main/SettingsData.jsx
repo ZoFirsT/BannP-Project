@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FiHome, FiShoppingCart, FiSettings, FiBox, FiLogOut, FiCheckCircle, FiTrendingUp, FiUser, FiMenu, FiX } from 'react-icons/fi';
 import { BsThreeDots } from 'react-icons/bs';
-import MyLineChart from './LineChart'; // Make sure the path is correct
 
 const Dashboard = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -39,6 +38,7 @@ const Dashboard = () => {
                             <MenuItem icon={<FiShoppingCart />} title="Order Product" />
                             <MenuItem icon={<FiSettings />} title="Manage Store" />
                             <MenuItem icon={<FiBox />} title="Manage Product" />
+                            <MenuItem icon={<FiBox />} title="Settings Data" />
                         </nav>
                     </div>
                     <MenuItem icon={<FiLogOut />} title="Log Out" />
@@ -47,7 +47,7 @@ const Dashboard = () => {
 
             <div className="flex-grow p-6">
                 <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-2xl pl-10 font-semibold text-gray-200">Dashboard</h2>
+                    <h2 className="text-2xl pl-10 font-semibold text-gray-200">Settings Data</h2>
                     <div className="flex items-center">
                         <FiUser className="text-2xl text-gray-600" />
                         <p>| Users</p>
@@ -55,15 +55,9 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <InfoCard icon={<FiCheckCircle />} title="Completed Orders" value="50" />
+                    {/* <InfoCard icon={<FiCheckCircle />} title="Completed Orders" value="50" />
                     <InfoCard icon={<FiTrendingUp />} title="Sales" value="10K บาท" />
-                    <InfoCard icon={<FiUser />} title="Customers" value="95%" />
-                </div>
-                <div className="bg-gray-600 p-6 rounded-xl shadow-lg mt-6">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-200">Sales Over Time</h3>
-                    <div className="h-96">
-                        <MyLineChart />
-                    </div>
+                    <InfoCard icon={<FiUser />} title="Customers" value="95%" /> */}
                 </div>
             </div>
         </div>
