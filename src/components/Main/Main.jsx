@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FiHome, FiShoppingCart, FiSettings, FiBox, FiLogOut, FiCheckCircle, FiTrendingUp, FiUser, FiMenu, FiX } from 'react-icons/fi';
 import { BsThreeDots } from 'react-icons/bs';
 import MyLineChart from './LineChart'; // Make sure the path is correct
+import Selector from './selector';
 
 const Managestore = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -48,17 +49,21 @@ const Managestore = () => {
             <div className="flex-grow p-6">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-2xl pl-10 font-semibold text-gray-200">Manage Store</h2>
-                    <div className="flex items-center">
-                        <FiUser className="text-2xl text-gray-600" />
-                        <p>| Users</p>
-                        <BsThreeDots className="text-2xl text-gray-600 ml-4" />
-                    </div>
                 </div>
                 <div className="bg-gray-600 p-6 rounded-xl shadow-lg mt-6">
-                    <h3 className="text-xl font-semibold mb-4 text-gray-200">Sales Over Time</h3>
-                    <div className="h-96">
-                        <MyLineChart />
+                <div className="flex p-16 content-center justify-center">
+                        <FiUser className="text-2xl text-gray-200" />
+                        <p>Users</p>
+                        <BsThreeDots className="text-2xl text-gray-600 ml-4" />
                     </div>
+                    <div className='text-xl p-6 '> 
+                    <span>category</span>
+                        <div className='p-2'>
+<Selector/>
+                        </div>
+                       
+                        
+</div>
                 </div>
             </div>
         </div>
