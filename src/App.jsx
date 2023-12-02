@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import PreLoader from './components/preloader'
 
 function App() {
