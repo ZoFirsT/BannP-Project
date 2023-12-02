@@ -42,12 +42,14 @@ const MyLineChart = () => {
                     type="monotone"
                     dataKey="pv"
                     stroke="#6366f1"
+                    strokeWidth={4}
                     activeDot={{ r: 8 }}
                 />
                 <Line
                     type="monotone"
                     dataKey="uv"
                     stroke="#34d399"
+                    strokeWidth={4}
                 />
             </RechartsLineChart>
         </ResponsiveContainer>
