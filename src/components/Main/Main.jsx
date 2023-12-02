@@ -82,7 +82,7 @@ const InfoCard = ({ icon, title, value }) => (
         <div className="p-4 bg-gray-600 rounded-xl text-white">
             {icon}
         </div>
-        <div className="ml-4 text-orange-600">
+        <div className="ml-4 text-black">
             <p className="text-md font-medium">{title}</p>
             <p className="text-lg font-semibold">{value}</p>
         </div>
