@@ -9,7 +9,7 @@ import {
   Legend,
   ResponsiveContainer
 } from 'recharts';
-import chartData from './data/chart_data.json'; // Ensure this path is correct
+import chartData from './data/chart_data.json';
 
 const MyLineChart = () => {
     return (
