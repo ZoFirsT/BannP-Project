@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { FiHome, FiShoppingCart, FiSettings, FiBox, FiLogOut, FiCheckCircle, FiTrendingUp, FiUser, FiMenu, FiX } from 'react-icons/fi';
+import { FiHome, FiShoppingCart, FiSettings, FiBox, FiLogOut, FiUser, FiMenu, FiX } from 'react-icons/fi';
 import { BsThreeDots } from 'react-icons/bs';
-import MyLineChart from './LineChart'; // Make sure the path is correct
+import MyLineChart from './LineChart';
 import Selector from './selector';
 
 const Managestore = () => {
@@ -28,9 +28,9 @@ const Managestore = () => {
             </button>
 
             <aside
-                className={`transform top-0 left-0 w-64 bg-[#2B2B2B] p-6 rounded-r-3xl shadow-xl fixed h-full overflow-auto ease-in-out transition-all duration-300 z-30 ${
+                className={`transform top-0 left-0 w-64 bg-[#2B2B2B] p-6 fixed h-full overflow-auto transition-all duration-300 z-30 ${
                     isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-                } lg:translate-x-0 lg:static lg:block`}
+                } lg:translate-x-0`}
             >
                 <div className="flex flex-col justify-between h-full text-white">
                     <div>
@@ -46,26 +46,27 @@ const Managestore = () => {
                 </div>
             </aside>
 
-            <div className="flex-grow p-6">
+            <main className="flex-grow p-6 overflow-auto">
                 <div className="flex justify-between items-center mb-6">
-                    <h2 className="text-2xl pl-10 font-semibold text-gray-200">Manage Store</h2>
+                    <h2 className="text-2xl px-10 py-1 font-semibold text-gray-200">Manage Store</h2>
                 </div>
-                <div className="bg-gray-600 p-6 rounded-xl shadow-lg mt-6">
-                <div className="flex p-16 content-center justify-center">
-                        <FiUser className="text-2xl text-gray-200" />
-                        <p>Users</p>
-                        <BsThreeDots className="text-2xl text-gray-600 ml-4" />
-                    </div>
-                    <div className='text-xl p-6 '> 
-                    <span>category</span>
-                        <div className='p-2'>
-<Selector/>
+                <div className="bg-gray-600 p-6 rounded-xl shadow-lg">
+                    <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center">
+                            <FiUser className="text-2xl text-gray-200 mr-2" />
+                            <span className="text-gray-200 text-lg">Users</span>
                         </div>
-                       
-                        
-</div>
+                        <BsThreeDots className="text-2xl text-gray-600" />
+                    </div>
+                    <div className='text-gray-200 mb-4'>
+                        <span className='text-xl'>Category</span>
+                        <div className='p-2'>
+                            <Selector />
+                        </div>
+                    </div>
+                    <MyLineChart />
                 </div>
-            </div>
+            </main>
         </div>
     );
 };
